@@ -1,0 +1,23 @@
+.ItemListMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.ItemList {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    color: blueviolet;
+}
