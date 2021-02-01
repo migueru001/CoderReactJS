@@ -1,0 +1,102 @@
+.CartMain {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.CartTable {
+    width: 90%;
+    height: 100%;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+}
+
+.CartTableHeader {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartTableSubHeader{
+    width: 100%;
+    height: 35px;
+    background: rgb(185,17,203);
+    background: linear-gradient(90deg, #b911cb 0%, #0074ff 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CartTableSubHeaderArticulo{
+    width: 30%;
+}
+
+.CartTableSubHeaderImagen{
+    width: 30%;
+}
+
+.CartTableSubHeaderCantidad{
+    width: 20%;
+}
+
+.CartTableSubHeaderPrecio{
+    width: 20%;
+}
+
+.CartTableBody{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartTableFooter{
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartTableFooterDescription {
+    width: 80%;
+    height: 50px;
+    border-right: 1px solid blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartTableFooterTotal{
+    width: 20%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartTableHeaderText {
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.CartTableSubHeaderText {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: right;
+}

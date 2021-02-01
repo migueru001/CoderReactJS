@@ -1,0 +1,6 @@
+.Footer {
+    background: rgb(185,17,203);
+    background: linear-gradient(90deg, #b911cb 0%, #0074ff 100%);
+    width: 100%;
+    height: 300px;
+}

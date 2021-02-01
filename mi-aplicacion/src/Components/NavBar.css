@@ -8,13 +8,21 @@
     align-items: center;
 }
 
+.MenuPadre {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .Menu {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 120px;
-    height: 50px;
+    height: 35px;
     border-radius: 8px;
     border: 1px solid rgb(255, 255, 255);
 }
@@ -22,4 +30,6 @@
 p {
     color: rgb(255, 255, 255);
     font-weight: 300;
+    padding-bottom: 2px;
+    text-decoration: none;
 }
