@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
+import NavBar from './Components/NavBar';
+import ItemListContainer from './Containers/ItemListContainer';
 
 ReactDOM.render(
+  <BrowserRouter>
     <React.StrictMode>
-        <App />
-    </React.StrictMode>,
+      <NavBar />
+      <Route exact path="/home">
+        <Switch>
+          <ItemListContainer nombre='Miguel Sanchez' />
+        </Switch>
+      </Route>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
