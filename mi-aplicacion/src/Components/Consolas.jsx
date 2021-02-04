@@ -1,14 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import './ItemList.css';
+import Imagen from './Imagen-Ejemplo.png';
+import Agregar from './Agregar';
+import Detalles from './Detalles';
+import {Link} from 'react-router-dom';
 
-function Consolas() {
-  return (
-    <React.Fragment>
-        <div className="Menu">
-            <Link to={`/consolas`} style={{color:'white',textDecoration:'none', fontWeight: '300'}} >Consolas</Link>
+const Consolas = ({item}) => {
+
+    return(
+        
+    <div className="ItemList">
+        <img src={Imagen} style={{width:300, height: 200}} alt="foto"/>
+        <div className="TituloArticuloPadre">
+            <p className="TituloArticulo">{item.nombre}</p>
         </div>
-    </React.Fragment>
-  );
+        <div className="TituloArticuloPadre02">
+            <p className="TituloPrecio">$ {item.costo}</p>
+        </div>
+        <div className="TituloArticuloPadre03">
+            <Link to={`/consolas/${item.id}`}>
+                <Detalles />
+            </Link>
+            <Agregar />
+        </div>
+    </div>
+
+    )
+
 }
 
 export default Consolas;

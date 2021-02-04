@@ -1,12 +1,19 @@
 import '../Components/NavBar.css';
 import CartWidget from './CartWidget';
+import Logo from './Logo';
+import BotonConsolas from './BotonConsolas';
+import BotonJuegos from './BotonJuegos';
+import BotonAccesorios from './BotonAccesorios';
 
 function NavBar() {
   return (
     <div className="NavBar">
-            <div className="Menu"><p>Opcion 01</p></div>
-            <div className="Menu"><p>Opcion 02</p></div>
-            <div className="Menu"><p>Opcion 03</p></div>
+            <Logo />
+            <div className="MenuPadre">
+              <BotonConsolas />
+              <BotonAccesorios />
+              <BotonJuegos />
+            </div>
             <CartWidget />
     </div>
   );

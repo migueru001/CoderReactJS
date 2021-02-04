@@ -1,70 +1,103 @@
 import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
-import CountContainer from './CountContainer';
 import ItemList from '../Components/ItemList';
-import ItemDetailContainer from './ItemDetailContainer'
+import Imagen from '../Components/Imagen-Ejemplo.png';
 
-const items = [
+
+const itemList = [
 
   {
     id: 0,
+    img: {Imagen},
     nombre: "PS5",
-    descripcion: "Consola de videojuegos",
-    costo: "500"
+    descripcion: "Consola de videojuegos PS5",
+    costo: 700
   },
   { 
     id: 1,
-    nombre: "Dualshock 5",
-    descripcion: "Control de videojuegos",
-    costo: "50"},
+    img: {Imagen},
+    nombre: "PS4 Pro",
+    descripcion: "Consola de videojuegos PS4 PRO",
+    costo: 400,
+  },
   {
     id: 2,
+    img: {Imagen},
+    nombre: "PS4 Slim",
+    descripcion: "Consola de videojuegos PS4 Slim",
+    costo: 350,
+  },
+  {
+    id: 3,
+    img: {Imagen},
+    nombre: "Dualshock 5",
+    descripcion: "Control de videojuegos PS5",
+    costo: 50
+  },
+  {
+    id: 4,
+    img: {Imagen},
+    nombre: "Dualshock 4",
+    descripcion: "Control de videojuegos PS4",
+    costo: 40,
+  },
+  {
+    id: 5,
+    img: {Imagen},
     nombre: "PS VR",
-    descripcion: "Lentes de videojuegos",
-    costo: "350",
+    descripcion: "Lentes de videojuegos PS4/PS5",
+    costo: 350,
+  },
+  {
+    id: 6,
+    img: {Imagen},
+    nombre: "Resident Evil 2",
+    descripcion: "Videojuego de PS4/PS5",
+    costo: 25,
+  },
+  {
+    id: 7,
+    img: {Imagen},
+    nombre: "Crash Bandicoot Trilogy",
+    descripcion: "Videojuego de PS4/PS5",
+    costo: 35,
+  },
+  {
+    id: 8,
+    img: {Imagen},
+    nombre: "The Last of Us 2",
+    descripcion: "Videojuego de PS4/PS5",
+    costo: 45,
   }
-
 ];
 
-function ItemListContainer(props) {
+const ItemListContainer = () => {
 
-  const [products, setProducts] = useState([])
+  const [item, setItem] = useState([])
 
   useEffect( () => { 
 
-    const promise = new Promise( (resolve) => {
+    const call = new Promise( (resolve) => {
       
       setTimeout( () => {
-
-        resolve(items)
-
+  
+        resolve(itemList)
+  
       }, 2000)
-    });
 
-    promise.then( response => {
-      setProducts(response)
+    });
+    
+    call.then( response => {
+      console.log(response)
+      setItem(response)
     } );
 
   }, [])
 
-  useEffect( () =>{
-    console.log(products)
-  },[products])
-
   return (
-    <React.Fragment>
-    <div className="ItemListContainer">
-        <div className="card">
-            <h3>Hola, soy {props.nombre}</h3>
-            <CountContainer initial={0} stock={10} />
-        </div>
-    </div>
-    <ItemList items={products} />
-
-    <ItemDetailContainer/>
-
-    </React.Fragment>
-
+      <React.Fragment>
+          <ItemList items={item} />
+      </React.Fragment>
   );
 }
 

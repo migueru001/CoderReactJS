@@ -1,28 +1,34 @@
 import React from 'react';
 import './ItemDetail.css';
+import CountContainer from '../Containers/CountContainer';
+import Imagen from './Imagen-Ejemplo.png';
 
-const ItemDetail = ({ getItems }) => {
-
+const ItemDetail = ({item, count }) => {
 
     return(
         
         <React.Fragment>
-
-                {getItems?.map((getItem) => {
-                    return (
-                    <div className="ItemDetailMain"  key={getItem.id}>
-                        <br/>
-                        <h3>{getItem.title}</h3>
-                        <br/>
-                        <div className="card">
-                            <img src={getItem.thumbnail}  alt="producto ML" style={{height: '100px'}}/>
+                
+                 <div className="ItemDetailMain">
+                    <div className="ItemDetailTable"> 
+                        <div className="ItemDetailTableHeader">
+                            <p className="ItemDetailTableText">Detalles del Producto:</p>
                         </div>
-                        <br/>
-                        <p className="Descripcion">{getItem.title}</p>
-                        <br/>
-                        <p className="Precio">{getItem.price}</p>
-                    </div> )
-                })} 
+
+                        <div className="ItemDetailProps" key={item.id}>
+                            <h3>{item.nombre}</h3>
+                            <br/>
+                            <div className="card">
+                                <img src={Imagen}  alt="producto ML" style={{height: '100px'}}/>
+                            </div>
+                            <br/>
+                            <p className="Descripcion">{item.descripcion}</p>
+                            <br/>
+                            <p className="Precio">{item.costo}</p>
+                            <CountContainer initial={0} stock={10} />
+                        </div> 
+                    </div>
+                </div> 
 
         </React.Fragment>
         

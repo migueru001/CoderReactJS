@@ -5,7 +5,7 @@ import Agregar from './Agregar';
 import Detalles from './Detalles';
 import {Link} from 'react-router-dom';
 
-const Juegos = ({item}) => {
+const Item = ({item}) => {
 
     return(
         
@@ -18,7 +18,7 @@ const Juegos = ({item}) => {
             <p className="TituloPrecio">$ {item.costo}</p>
         </div>
         <div className="TituloArticuloPadre03">
-            <Link to={`/juegos/${item.id}`}>
+            <Link to={`/item/${item.id}`}>
                 <Detalles />
             </Link>
             <Agregar />
@@ -29,4 +29,4 @@ const Juegos = ({item}) => {
 
 }
 
-export default Juegos;
+export default Item;

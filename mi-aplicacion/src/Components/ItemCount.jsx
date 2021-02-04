@@ -10,7 +10,7 @@ const ItemCount = ({min, max, count, onAdd}) => {
                 <p className="ContadorNumero">{count}</p>
                 <button  onClick={max} className="ContadorMas">+</button>
             </div>
-            <button className="AgregarBoton" onClick={onAdd} >Agregar</button>
+            <button className="AgregarBoton" onClick={onAdd} >Terminar mi compra</button>
         </React.Fragment>
     );
   }
