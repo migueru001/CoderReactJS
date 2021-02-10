@@ -71,9 +71,12 @@ const itemList = [
   }
 ];
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ( {articulo} ) => {
+
 
   const [item, setItem] = useState([])
+
+  const [Articulo, setArticulo] = useState({})
 
   const {id} = useParams();
 
@@ -83,7 +86,7 @@ const ItemDetailContainer = () => {
       
       setTimeout( () => {
   
-        resolve(itemList)
+        resolve(itemList, articulo)
   
       }, 2000)
 
@@ -91,13 +94,15 @@ const ItemDetailContainer = () => {
     
     call.then( response => {
       setItem(response[id])
+      setArticulo(articulo)
     } );
 
   }, [id])
 
+
   return (
       <React.Fragment>
-          <ItemDetail item={item}/>
+          <ItemDetail item={item} Articulo={Articulo}/>
       </React.Fragment>
   );
 }

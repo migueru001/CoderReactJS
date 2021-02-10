@@ -1,6 +1,9 @@
 import React from 'react';
 import './Cart.css'
-function Cart() {
+function Cart({articulo}) {
+
+console.log(articulo)
+
   return (
 
     <React.StrictMode>
@@ -31,7 +34,7 @@ function Cart() {
                         <p className="CartTableHeaderText">Detalle de la compra:</p>
                     </div>
                     <div className="CartTableFooterTotal">
-                        <p className="CartTableHeaderText">$ 000</p>
+                        <p className="CartTableHeaderText">$ {articulo.costo}</p>
                     </div>
                 </div>
             </div>
